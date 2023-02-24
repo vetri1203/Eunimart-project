@@ -1,5 +1,3 @@
-export const Port =5005;
+export const Port =6000;
 
-export const MongooseUrl = 'mongodb+srv://vetrivel:1234@cluster0.cob2hq8.mongodb.net/?retryWrites=true&w=majority'
-// export Port,
-
+export const MongooseUrl = 'mongodb+srv://vetrivel:vetri@cluster0.ouufah5.mongodb.net/test'
