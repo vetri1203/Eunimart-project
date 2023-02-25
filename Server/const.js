@@ -1,3 +1,3 @@
-export const Port =6000;
+export const Port =6002;
 
-export const MongooseUrl = 'mongodb+srv://vetrivel:vetri@cluster0.ouufah5.mongodb.net/test'
+export const MongooseUrl = 'mongodb+srv://vetrivel:12345@cluster00.d2sjp26.mongodb.net/test';

@@ -1,16 +1,17 @@
-import twiteeModel from "../Schema/twitteSchema.js";
+import twitModel from "../Schema/twitSchema.js";
+// import {v4: uuidv4}    from "uuid";
 
 
 export const msg = async(req,res) => {
     const body = req.body;
 
-    if((body.twiteeMsg))
+    if((body.twitMsg))
     {
         return res.status(400).send({error : "Please fill any messages"});
     }
 
 
-    const content = new twiteeModel(body);
+    const content = new twitModel(body);
 
     content.save((err,data) => {
         if(err) 

@@ -1,4 +1,4 @@
-import SignupModel from "../Schema/SignupSchema.js";
+import { SignupModel } from "../Schema/SignupSchema.js";
 // import bcr
 import bcrypt, { compare } from "bcrypt";
 

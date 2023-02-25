@@ -23,15 +23,14 @@ const userSchema = new mongoose.Schema(
         },
         userMail : {
             type :String,
-            require:true
+            require:true,
+            unique : true,
         },
         UserPassword : {
             type : String,
             require:true
         }
     }
-)
+);
 
- const SignupModel = new mongoose.model('signupData',userSchema);
-
- export default SignupModel;
+export const SignupModel = new mongoose.model('signupdatas',userSchema);

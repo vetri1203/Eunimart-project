@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import SignupModel from "../Schema/SignupSchema.js";
+import { SignupModel } from "../Schema/SignupSchema.js";
 
 export const signup = async(req,res) => {
     SignupModel.findOne ( {
@@ -11,15 +11,15 @@ export const signup = async(req,res) => {
         }
         else {
             if(data) {
-                res.send("Email is already taken");
+                res.send("Email is already taken"); 
             }
             else {
                 const body = req.body;
                 if(!(body.userFirstName 
-                        && body.userMiddleName
-                        && body.userLastName
-                        && body.userMail
-                        && body.userPassword))
+                        || body.userMiddleName
+                        || body.userLastName
+                        || body.userMail
+                        || body.userPassword))
                 {
                     return res.status(400).send({error : "please fill all the details"});
                 }
